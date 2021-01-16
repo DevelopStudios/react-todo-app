@@ -1,5 +1,14 @@
-.app-container .bannerContainer {
+.app-container .bannerContainer.day{
     background-repeat: no-repeat;
+    background:url('../images/bg-desktop-light.jpg');
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+}
+
+.app-container .bannerContainer.night{
+    background-repeat: no-repeat;
+    background:url('../images/bg-desktop-dark.jpg');
     width: 100%;
     height: 400px;
     background-size: cover;

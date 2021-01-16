@@ -2,11 +2,8 @@ import React from 'react';
 import "./style.css";
 
 const banner = (props:any) => {
-  var sectionStyle = {
-    backgroundImage: "url(" + props.background + ")",
-  };
-  return <div className="bannerContainer" style={sectionStyle}>
-      <button>
+  return <div className={'bannerContainer ' + props.day}>
+      <button onClick={props.clickHandler}>
                 test
       </button>
   </div>;

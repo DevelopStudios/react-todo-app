@@ -1,23 +1,25 @@
-import logo from "./logo.svg";
+import { Component } from "react";
 import "./App.css";
 import Banner from "./Banner/Banner";
-import Background from "././images/bg-desktop-dark.jpg";
-import Backgroundlight from "././images/bg-desktop-light.jpg";
-import Backgroundmobiledark from "././images/bg-mobile-dark.jpg";
-import Backgroundmobilelight from "././images/bg-mobile-light.jpg";
-function App() {
-  let backgrounds = [
-    Background,
-    Backgroundlight,
-    Backgroundmobiledark,
-    Backgroundmobilelight,
-  ];
-  let pickedBackground = backgrounds[1];
+class App extends Component {
+  state = {
+    mode: 'day'
+  }
+
+  toggleDayNight = () => {
+    if(this.state.mode === 'day'){
+      this.setState({mode: 'night'});
+    } else {
+      this.setState({mode:'day'});
+    }
+  }
+    render() {
   return (
     <div className="app-container">
-      <Banner background={pickedBackground}/>
+      <Banner clickHandler={this.toggleDayNight} day={this.state.mode}/>
     </div>
   );
+}
 }
 
 export default App;
