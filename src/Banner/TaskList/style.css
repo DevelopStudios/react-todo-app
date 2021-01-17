@@ -1,0 +1,28 @@
+.tasklistContainer {
+  margin: auto;
+  max-width: 540px;
+  margin-top: 40px;
+}
+
+.tasklistContainer .entry-form {
+    border-radius: 0;
+}
+
+.tasklistContainer .enteredTasks .entry-form:first-of-type {
+  border-top-left-radius:6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.tasklistContainer .enteredTasks .entry-form:last-of-type {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.tasklistContainer .taskListFooter {
+    display: flex;
+    justify-content: space-between;
+}

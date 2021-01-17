@@ -1,6 +1,7 @@
 import { Component } from "react";
 import "./App.css";
 import Banner from "./Banner/Banner";
+import TaskList from "./Banner/TaskList/TaskList";
 class App extends Component {
   state = {
     mode: 'day'
@@ -17,6 +18,7 @@ class App extends Component {
   return (
     <div className="app-container">
       <Banner clickHandler={this.toggleDayNight} day={this.state.mode}/>
+      <TaskList mode={this.state.mode}></TaskList>
     </div>
   );
 }
