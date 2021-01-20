@@ -2,7 +2,8 @@
     background: #fff;
     display: flex;
     max-width: 540px;
-    padding: 24px;
+    padding: 18px;
+    align-items: center;
     border-radius: 4px;
     border: 1px solid gray;
 }
@@ -11,6 +12,7 @@
     border: none;
     width: 440px;
     outline: none;
+    box-shadow: none;
     background: white;
 }
 
@@ -18,7 +20,7 @@
     background: gray;
     display: flex;
     max-width: 540px;
-    padding: 24px;
+    padding: 18px;
     border-radius: 4px;
     color: #fff;
     border: 1px solid gray;
@@ -45,5 +47,7 @@
     width: 440px;
     background: gray;
     outline: none;
+    box-shadow: none;
     color: #fff;
 }
+

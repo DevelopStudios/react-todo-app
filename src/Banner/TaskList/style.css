@@ -5,11 +5,11 @@
 }
 
 .tasklistContainer .entry-form {
-    border-radius: 0;
+  border-radius: 0;
 }
 
 .tasklistContainer .enteredTasks .entry-form:first-of-type {
-  border-top-left-radius:6px;
+  border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -18,11 +18,90 @@
 .tasklistContainer .enteredTasks .entry-form:last-of-type {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.tasklistContainer .taskListFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.taskListFooter {
+  background: #fff;
+  display: flex;
+  max-width: 540px;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 
-.tasklistContainer .taskListFooter {
+
+label.btn {
+    background: transparent;
+    color: gray;
+    border: none;
+}
+
+label.btn:hover {
+    background: transparent;
+    color: #111;
+    border: none;
+}
+
+label.btn.active {
+    background: transparent !IMPORTANT;
+    color: #111 !important;
+    border: none !important;
+}
+
+.taskListFooter .thirdContainer button.btn.active.btn-secondary.btn-lg {
+    background: transparent;
+    color: #111;
+    border: none;
+    font-size: 18px;
+}
+
+.taskListFooter .secondContainer label.btn.btn-secondary {
+    font-size: 18px;
+}
+
+.taskListFooter .firstContainer {
+    font-size: 18px;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+.btn-secondary.focus, .btn-secondary:focus {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    background-color: transparent;
+    color: #808080;
+}
+
+.taskListFooter.night {
+    background: grey;
+}
+
+.taskListFooter.night .firstContainer {
+    color: #fff;
+}
+
+.taskListFooter.night .secondContainer .buttonContainer label.btn.active.btn-secondary {
+    color: blue !important;
+}
+
+.taskListFooter.night .secondContainer label.btn.btn-secondary:hover {
+    color: #fff !important;
 }
