@@ -1,0 +1,19 @@
+.TaskFormWrapper span.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary:hover {
+    cursor: pointer;
+}
+
+.TaskFormWrapper span.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
+    visibility: hidden;
+}
+
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-adornedStart.MuiOutlinedInput-adornedStart.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd:hover .MuiIconButton-colorPrimary {
+    visibility: visible;
+}
+
+.TaskFormWrapper .svg-container:hover {
+    cursor: pointer;
+}
+
+.enteredTasksContainer input#task-form {
+    padding: 24px 0;
+}

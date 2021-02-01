@@ -1,0 +1,17 @@
+#task-form {
+    width: 100%;
+}
+
+.svg-container {
+    margin-right: 24px;
+}
+
+input#task-form {
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: -0.25px;
+    color: #494C6B;
+}

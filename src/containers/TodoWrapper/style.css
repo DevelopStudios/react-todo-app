@@ -1,0 +1,38 @@
+.TodoWrapper {
+     max-width: 540px;
+     margin: 0 auto;
+     margin-top: -231px;
+}
+
+.enteredTasksContainer {
+    margin-top: 24px;
+}
+
+.TodoWrapper .TopSectionWrapper .left-container h3 {
+    font-family: Josefin Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: 15px;
+    color: #FFFFFF;
+}
+
+.TodoWrapper .TopSectionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TopSectionWrapper .right-container .icon:hover {
+    cursor: pointer;
+}
+
+.task-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 16px;
+}

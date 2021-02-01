@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.AppWrapper .banner {
+    left: 0;
+    right: 0;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Global Styles */
+
+.MuiFormControl-root.MuiTextField-root {
+    width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl {
+    background: #FFFFFF;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AppWrapper.night .TodoWrapper .MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-adornedStart.MuiOutlinedInput-adornedStart {
+    background: #25273D;
 }
 
-.App-link {
-  color: #61dafb;
+.AppWrapper.night {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #25273D;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.AppWrapper.day {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #F2F2F2;
+}
+.AppWrapper.night .TaskFormWrapper input#task-form {
+    color: #C8CBE7;
+}
+
+.AppWrapper.night input#task-form {
+    color: #C8CBE7;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border: none !important;
+    border-bottom: 1px solid #E3E4F1 !important;
+}
+
+.MuiFormControl-root.MuiTextField-root.done input#task-form {
+    text-decoration: line-through;
+}
+
+.AppWrapper.night .MuiOutlinedInput-notchedOutline {
+    border: none !important;
+    border-bottom: 1px solid #393A4B !important;
+}
+
+.AppWrapper.night .task-footer {
+    background: #25273D;
+    color: #5B5E7E;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text span.MuiButton-label {
+    color: #5B5E7E;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.active span.MuiButton-label {
+    color: #3A7CFD;
 }
