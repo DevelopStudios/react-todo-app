@@ -42,9 +42,6 @@ function App() {
    mode === true
      ? setBackgroundState(backgroundNight)
      : setBackgroundState(background);
-    if(filterState === "Completed") {
-      console.log('filtering only done tasks...')
-    }
   })
 
   return (

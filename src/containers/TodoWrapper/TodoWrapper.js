@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component, useEffect} from "react";
 import EntryForm from "../../components/EntryForm/EntryForm";
 import TaskForm from "../../components/TaskForm/TaskForm";
 import Button from "@material-ui/core/Button";
@@ -52,15 +52,35 @@ class TodoWrapper extends Component {
         </div>
         <EntryForm pushTask={(event) => this.props.pushTask(event)} />
         <div className="enteredTasksContainer">
-          {this.props.tasks.map((task, index) => {
-            return (
-              <TaskForm
-                task={task}
-                removeTask={() => this.props.removeTask(index)}
-                toggleDone={() => this.props.toggleDone(index)}
-              />
-            );
-          })}
+          {}
+
+            {this.props.filterState === 'All' && this.props.tasks.map((task, index) => {
+                return (
+                    <TaskForm
+                        task={task}
+                        removeTask={() => this.props.removeTask(index)}
+                        toggleDone={() => this.props.toggleDone(index)}
+                    />
+                );
+            })}
+            {this.props.filterState === 'Completed' && this.props.tasks.filter(value => value.done === true).map((task, index) => {
+                return (
+                    <TaskForm
+                        task={task}
+                        removeTask={() => this.props.removeTask(index)}
+                        toggleDone={() => this.props.toggleDone(index)}
+                    />
+                );
+            })}
+            {this.props.filterState === 'Active' && this.props.filterState === 'Active' && this.props.tasks.filter(value => value.done === false).map((task, index) => {
+                return (
+                    <TaskForm
+                        task={task}
+                        removeTask={() => this.props.removeTask(index)}
+                        toggleDone={() => this.props.toggleDone(index)}
+                    />
+                );
+            })}
           {this.props.tasks.length ? (
             <div className="task-footer">
               <div className="taskCount">{taskAmmount} items left</div>
