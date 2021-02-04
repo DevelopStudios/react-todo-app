@@ -72,3 +72,35 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text span.MuiButton-label {
 button.MuiButtonBase-root.MuiButton-root.MuiButton-text.active span.MuiButton-label {
     color: #3A7CFD;
 }
+
+
+/* Media Queries */
+
+
+
+@media only screen and (max-width: 440px) {
+  .TodoWrapper {
+    max-width: 350px !important;
+    }
+    .taskCount {
+    display: none;
+}
+.taskCount {
+    display: none;
+}
+.task-footer {
+    justify-content: center !important;
+}
+
+.clearContainer {
+    display: none;
+}
+}
+
+
+@media only screen and (max-width: 320px) {
+.TodoWrapper {
+    max-width: 279px !important;
+}
+}
+
