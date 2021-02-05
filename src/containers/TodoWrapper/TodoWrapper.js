@@ -52,8 +52,6 @@ class TodoWrapper extends Component {
         </div>
         <EntryForm pushTask={(event) => this.props.pushTask(event)} />
         <div className="enteredTasksContainer">
-          {}
-
             {this.props.filterState === 'All' && this.props.tasks.map((task, index) => {
                 return (
                     <TaskForm

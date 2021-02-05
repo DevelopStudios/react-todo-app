@@ -8,11 +8,13 @@ const handleChange = (event) => {
 };
 const handleKeyDown = (event) => {
    if (event.key === "Enter") {
-     props.pushTask({
-       value: event.target.value,
-       done: false,
-       edit: false,
-     });
+       if(event.target.value) {
+           props.pushTask({
+               value: event.target.value,
+               done: false,
+               edit: false,
+           });
+       }
      setValue('');
    }
  }
