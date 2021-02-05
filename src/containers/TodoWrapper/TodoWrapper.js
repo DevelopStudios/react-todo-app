@@ -72,7 +72,7 @@ class TodoWrapper extends Component {
                     />
                 );
             })}
-            {this.props.filterState === 'Active' && this.props.filterState === 'Active' && this.props.tasks.filter(value => value.done === false).map((task, index) => {
+            {this.props.filterState === 'Active'  && this.props.tasks.filter(value => value.done === false).map((task, index) => {
                 return (
                     <TaskForm
                         task={task}
@@ -83,7 +83,11 @@ class TodoWrapper extends Component {
             })}
           {this.props.tasks.length ? (
             <div className="task-footer">
-              <div className="taskCount">{taskAmmount} items left</div>
+              <div className="taskCount">
+                  {this.props.filterState === 'Active' && this.props.tasks.filter(value => value.done === false).length}
+                  {this.props.filterState === 'All' && this.props.tasks.filter(value => value).length}
+                  {this.props.filterState === 'Completed' && this.props.tasks.filter(value => value.done === true).length}
+                   <span> items left</span></div>
               <div className="filterContainer">
                 <Button
                   className={this.props.filterState === "All" ? "active" : ""}
