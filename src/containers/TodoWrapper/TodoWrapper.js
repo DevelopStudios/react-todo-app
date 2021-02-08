@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 import "./style.css";
 class TodoWrapper extends Component {
   render() {
-    let taskAmmount = this.props.tasks.length;
+    let taskAmmount = this.props.tasks.filter(task => task.done === false).length;
     return (
       <div className="TodoWrapper">
         <div className="TopSectionWrapper">
@@ -82,10 +82,7 @@ class TodoWrapper extends Component {
           {this.props.tasks.length ? (
             <div className="task-footer">
               <div className="taskCount">
-                  {this.props.filterState === 'Active' && this.props.tasks.filter(value => value.done === false).length}
-                  {this.props.filterState === 'All' && this.props.tasks.filter(value => value).length}
-                  {this.props.filterState === 'Completed' && this.props.tasks.filter(value => value.done === true).length}
-                   <span> items left</span></div>
+                   <span>{taskAmmount} items left</span></div>
               <div className="filterContainer">
                 <Button
                   className={this.props.filterState === "All" ? "active" : ""}
