@@ -24,6 +24,7 @@ const handleKeyDown = (event) => {
       variant="outlined"
       onChange={handleChange}
       onKeyDown={handleKeyDown}
+      placeholder='Create a new todo...'
       value={value}
       InputProps={{
         startAdornment: (

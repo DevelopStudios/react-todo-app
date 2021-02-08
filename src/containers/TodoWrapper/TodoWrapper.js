@@ -14,7 +14,7 @@ class TodoWrapper extends Component {
           </div>
           <div className="right-container">
             <div className="icon" onClick={this.props.test}>
-              {this.props.mode === true ? (
+              {this.props.mode === false ? (
                 <svg
                   width="26"
                   height="26"

@@ -4,10 +4,16 @@ import TodoWrapper from "./containers/TodoWrapper/TodoWrapper";
 import background from "./assets/day.jpg";
 import backgroundNight from "./assets/night.jpg";
 function App() {
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(true);
   const [modeState, setModeState] = useState("day");
   const [backgroundState, setBackgroundState] = useState(background);
-  let [tasks, updateTasks] = useState([]);
+  let [tasks, updateTasks] = useState([
+      {value: "Complete online javascript course", done: true, edit: false},
+      {value: "Jog around the park 3x", done: false, edit: false},
+      {value: "10 minutes meditation", done: false, edit: false},
+      {value: "Read for 1 hour", done: false, edit: false},
+      {value: "Pickup grouceries", done: false, edit: false},
+      {value: "Complete Todo App on Frontend Mentor", done: false, edit: false}]);
   const [filterState, setFilterState] = useState('All');
   function updateMode() {
     setMode(!mode);
@@ -17,6 +23,7 @@ function App() {
     let cloneDB = [...tasks]
     cloneDB.push(event);
     updateTasks(cloneDB)
+    console.log(tasks);
   }
 
   function removeTask(index) {
