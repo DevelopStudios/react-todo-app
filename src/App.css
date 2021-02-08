@@ -27,9 +27,11 @@
     right: 0;
     bottom: 0;
     top: 0;
-    background: #25273D;
+    background: #111;
 }
-
+.TaskFormWrapper .MuiFormControl-root.MuiTextField-root.done textarea#task-form {
+    color: rgb(152 150 150);
+}
 .AppWrapper.day {
     position: absolute;
     left: 0;
