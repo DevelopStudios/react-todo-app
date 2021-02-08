@@ -36,3 +36,7 @@
     border-radius: 0 0 5px 5px;
     padding: 16px;
 }
+
+.TaskFormWrapper svg:hover circle {
+    stroke: #6dbefc;
+}

@@ -8,11 +8,13 @@ const handleChange = (event) => {
 };
 const handleKeyDown = (event) => {
    if (event.key === "Enter") {
-     props.pushTask({
-       value: event.target.value,
-       done: false,
-       edit: false,
-     });
+       if(event.target.value) {
+           props.pushTask({
+               value: event.target.value,
+               done: false,
+               edit: false,
+           });
+       }
      setValue('');
    }
  }
@@ -22,6 +24,7 @@ const handleKeyDown = (event) => {
       variant="outlined"
       onChange={handleChange}
       onKeyDown={handleKeyDown}
+      placeholder='Create a new todo...'
       value={value}
       InputProps={{
         startAdornment: (

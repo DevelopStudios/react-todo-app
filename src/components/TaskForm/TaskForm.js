@@ -5,6 +5,8 @@ const TaskForm = (props) => {
   return (
     <div className="TaskFormWrapper">
       <TextField
+          multiline
+          rowsMax={4}
         id="task-form"
         variant="outlined"
         value={props.task.value}
